@@ -3,7 +3,7 @@ body {
 }
 
 .profile {
-  padding: 20px;
+  padding: 30px;
   display: grid;
   grid-template-columns: minmax(auto, 1024px);
   justify-content: center;
@@ -17,15 +17,17 @@ body {
     "logo stats"
     "logo description";
   grid-gap: 20px;
+  padding-left: 50px;
 }
 
 .logo-profile {
   grid-area: logo;
+  padding: 0px 60px;
   max-width: 150px;
 }
 
 .logo-profile img {
-  border: 1px solid gray;
+  border: 1px solid lightgray;
   border-radius: 50%;
   width: 150px;
   overflow: hidden;
@@ -34,13 +36,14 @@ body {
 .user {
   grid-area: user;
   display: flex;
+  align-items: center;
 }
 
-.user-name h2 {
+.user-name p {
   margin: 0;
   color: #262626;
   font-size: 28px;
-  font-weight: 300;
+  padding-right: 20px;
 }
 
 .follow-buttom a {
@@ -57,6 +60,7 @@ body {
   grid-area: stats;
   display: flex;
   flex-direction: row;
+  padding: 5px 0;
 }
 
 .user-stats li {
@@ -80,7 +84,62 @@ body {
   grid-area: description;
 }
 
+.user-name-profile {
+  padding-bottom: 5px;
+}
+
 .user-description p {
   font-size: 16px;
-  margin: 0;
+  margin: 0 0 5px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .user-stats {
+    display: none;
+  }
+
+  .user {
+    grid-area: user;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-name p {
+    margin: 0;
+    color: #262626;
+    font-size: 28px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+  }
+
+  .follow-buttom a {
+    padding: 5px 90px;
+    border-radius: 5px;
+  }
+
+  .profile {
+    padding: 30px 15px 10px;
+  }
+
+  .profile-container {
+    display: grid;
+    padding: 0;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas:
+      "logo user"
+      "logo stats"
+      "description description";
+    grid-gap: 20px;
+  }
+
+  .logo-profile {
+    grid-area: logo;
+    padding: 0px 0px;
+    max-width: 77px;
+  }
+
+  .logo-profile img {
+    width: 77px;
+  }
 }
