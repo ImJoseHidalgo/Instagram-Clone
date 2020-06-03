@@ -1,0 +1,86 @@
+body {
+  background: #fafafa;
+}
+
+.profile {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: minmax(auto, 1024px);
+  justify-content: center;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas:
+    "logo user"
+    "logo stats"
+    "logo description";
+  grid-gap: 20px;
+}
+
+.logo-profile {
+  grid-area: logo;
+  max-width: 150px;
+}
+
+.logo-profile img {
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 150px;
+  overflow: hidden;
+}
+
+.user {
+  grid-area: user;
+  display: flex;
+}
+
+.user-name h2 {
+  margin: 0;
+  color: #262626;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.follow-buttom a {
+  background-color: #0095f6;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.user-stats {
+  grid-area: stats;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-stats li {
+  list-style: none;
+  padding-right: 50px;
+}
+
+.user-stats li a {
+  text-decoration: none;
+  color: #262626;
+}
+
+.user-name-profile p {
+  margin: 0;
+  color: #262626;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.description {
+  grid-area: description;
+}
+
+.user-description p {
+  font-size: 16px;
+  margin: 0;
+}
