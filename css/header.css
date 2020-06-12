@@ -3,13 +3,30 @@
   width: 100%;
   border-bottom: 1px solid lightgray;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  background: #fafafa;
+}
+
+.container {
+  width: 935px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  background: white;
+  grid-template-areas: "logoH search button";
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
 }
 
 .logo {
+  grid-area: logoH;
   padding-top: 7px;
+}
+
+.search-container {
+  grid-area: search;
+  display: flex;
+  justify-content: center;
 }
 
 .search {
@@ -34,6 +51,12 @@
   padding-left: 2.5px;
 }
 
+.login {
+  grid-area: button;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .login-buttonsShow1 a {
   padding: 0;
 }
@@ -54,9 +77,28 @@
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1024px) {
+  .logo {
+    padding-left: 15px;
+  }
+
+  .login {
+    padding-right: 15px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .header {
     justify-content: space-between;
+  }
+
+  .search-container {
+    display: none;
+  }
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logoH button";
   }
 
   .logo {
@@ -65,9 +107,5 @@
 
   .login {
     padding-right: 15px;
-  }
-
-  .search {
-    display: none;
   }
 }
