@@ -23,6 +23,7 @@
 
 .carrousel-img img {
   border: 1px solid lightgray;
+  cursor: pointer;
   border-radius: 50px;
   width: 87px;
 }
@@ -33,9 +34,10 @@
   color: #262626;
   font-weight: 600;
   font-size: 14.5px;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 600px) {
   .carrousel-container {
     margin-top: -20px;
   }
